@@ -110,8 +110,7 @@ class _AboutState extends State<About> {
                         )
                       ],
                     )
-                  : MediaQuery.of(context).size.width > ScreenSizes.mobileWidth
-                      ? Column(
+                  :  Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             SizedBox(
@@ -119,8 +118,18 @@ class _AboutState extends State<About> {
                             ),
                             Row(
                               children: [
+                                Container(
+                                  width: 150,
+                                  height: 150,
+                                  child: ClipRRect
+                                  (
+                                    borderRadius: BorderRadius.circular(100)
+                                    ,child: Image.asset(ImageConstant.venom2,fit: BoxFit.cover,)),
+                                ),
+                                SizedBox(width: 10,),
                                 Expanded(
                                   child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
                                       Text(
                                         'Vishal Kumar Mauray',
@@ -143,42 +152,13 @@ class _AboutState extends State<About> {
                                     ],
                                   ),
                                 ),
-                                SizedBox(
-                                  width: 20,
-                                ),
-                                SizedBox(
-                                  width: 0.4.sw,
-                                  child: CarouselSlider(
-                                    options: CarouselOptions(
-                                      height: 450,
-                                      autoPlay: true,
-                                      enlargeCenterPage: true,
-                                      autoPlayInterval: const Duration(seconds: 5),
-                                      enableInfiniteScroll: true,
-                                    ),
-                                    items: venomImg.map((i) {
-                                      return Builder(
-                                        builder: (BuildContext context) {
-                                          return Container(
-                                            width: MediaQuery.of(context).size.width,
-                                            margin: EdgeInsets.only(top: 70.h, left: 60, right: 60),
-                                            decoration: const BoxDecoration(color: Colors.transparent),
-                                            child: ClipRRect(
-                                              borderRadius: BorderRadius.circular(25),
-                                              child: Image.asset(
-                                                i,
-                                              ),
-                                            ),
-                                          );
-                                        },
-                                      );
-                                    }).toList(),
-                                  ),
-                                ),
                               ],
                             ),
                             SizedBox(
-                              height: 60.h,
+                              width: 20,
+                            ),
+                            SizedBox(
+                              height: 20,
                             ),
                             Text(
                               "Highly skilled and motivated Flutter Developer with over 1 year of hands-on experience creating and implementing innovative mobile applications. Proficient in all stages of the software development life cycle, with a strong foundation in mobile app architecture, user interface design, and cross-platform development. Adept at collaborating with cross-functional teams to define, design, and ship new features. Proven track record of delivering high-quality and performant applications for both Android and IOS platforms.",
@@ -195,7 +175,7 @@ class _AboutState extends State<About> {
                             ),
                           ],
                         )
-                      : Container(),
+                    ,
               MediaQuery.of(context).size.width > 770
                   ? Container(
                       width: double.infinity,
@@ -546,17 +526,18 @@ class MenuContainer extends StatelessWidget {
           const SizedBox(
             width: 20,
           ),
-          Text(
-            skill,
-            style: GoogleFonts.sevillana(
-              textStyle: const TextStyle(
-                fontSize: 30.0,
-                color: Colors.black,
-                fontWeight: FontWeight.w600,
+          Expanded(
+            child: Text(
+              skill,
+              style: GoogleFonts.sevillana(
+                textStyle: const TextStyle(
+                  fontSize: 30.0,
+                  color: Colors.black,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
             ),
           ),
-          const Spacer(),
           Text(
             isFixed ? exp : "${diff.inDays ~/ 365}+ years",
             style: GoogleFonts.heebo(
@@ -594,7 +575,7 @@ class ExperienceContainer extends StatelessWidget {
       children: [
         if (MediaQuery.of(context).size.width > 600)
           SizedBox(
-            width: 150,
+            width: 160,
             child: Text(
               mainHead,
               style: GoogleFonts.sevillana(
