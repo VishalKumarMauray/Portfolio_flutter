@@ -36,15 +36,7 @@ class _PersonalProjectState extends State<PersonalProject> {
             SizedBox(
               height: 60.h,
             ),
-            Text(
-              'Comming Soon',
-              style: GoogleFonts.sevillana(
-                textStyle: const TextStyle(
-                  fontSize: 45.0,
-                  color: ColorConstant.white,
-                ),
-              ),
-            ),
+            const Text("Coming soon"),
           ],
         ),
       ),
@@ -177,7 +169,6 @@ class ProjectDataContainer extends StatelessWidget {
                       width: 0.4.sw,
                       child: CarouselSlider(
                         options: CarouselOptions(
-                          // height: 450,
                           autoPlay: true,
                           enlargeCenterPage: true,
                           autoPlayInterval: const Duration(seconds: 5),
@@ -188,8 +179,10 @@ class ProjectDataContainer extends StatelessWidget {
                             builder: (BuildContext context) {
                               return Container(
                                 width: MediaQuery.of(context).size.width,
-                                margin: EdgeInsets.only(top: 70.h, left: 60, right: 60),
-                                decoration: const BoxDecoration(color: Colors.transparent),
+                                margin: EdgeInsets.only(
+                                    top: 70.h, left: 60, right: 60),
+                                decoration: const BoxDecoration(
+                                    color: Colors.transparent),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(25),
                                   child: Image.asset(

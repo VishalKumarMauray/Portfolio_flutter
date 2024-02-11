@@ -94,8 +94,10 @@ class _AboutState extends State<About> {
                                 builder: (BuildContext context) {
                                   return Container(
                                     width: MediaQuery.of(context).size.width,
-                                    margin: EdgeInsets.only(top: 70.h, left: 60, right: 60),
-                                    decoration: const BoxDecoration(color: Colors.transparent),
+                                    margin: EdgeInsets.only(
+                                        top: 70.h, left: 60, right: 60),
+                                    decoration: const BoxDecoration(
+                                        color: Colors.transparent),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(25),
                                       child: Image.asset(
@@ -110,72 +112,75 @@ class _AboutState extends State<About> {
                         )
                       ],
                     )
-                  :  Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                  : Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(
+                          height: 50.h,
+                        ),
+                        Row(
                           children: [
-                            SizedBox(
-                              height: 50.h,
+                            Container(
+                              width: 150,
+                              height: 150,
+                              child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(100),
+                                  child: Image.asset(
+                                    ImageConstant.venom2,
+                                    fit: BoxFit.cover,
+                                  )),
                             ),
-                            Row(
-                              children: [
-                                Container(
-                                  width: 150,
-                                  height: 150,
-                                  child: ClipRRect
-                                  (
-                                    borderRadius: BorderRadius.circular(100)
-                                    ,child: Image.asset(ImageConstant.venom2,fit: BoxFit.cover,)),
-                                ),
-                                SizedBox(width: 10,),
-                                Expanded(
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        'Vishal Kumar Mauray',
-                                        style: GoogleFonts.sevillana(
-                                          textStyle: const TextStyle(
-                                            fontSize: 45.0,
-                                            color: ColorConstant.golden,
-                                          ),
-                                        ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Vishal Kumar Mauray',
+                                    style: GoogleFonts.sevillana(
+                                      textStyle: const TextStyle(
+                                        fontSize: 45.0,
+                                        color: ColorConstant.golden,
                                       ),
-                                      Text(
-                                        'Mobile App Developer',
-                                        style: GoogleFonts.sevillana(
-                                          textStyle: const TextStyle(
-                                            fontSize: 35.0,
-                                            color: ColorConstant.white,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
+                                    ),
                                   ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              width: 20,
-                            ),
-                            SizedBox(
-                              height: 20,
-                            ),
-                            Text(
-                              "Highly skilled and motivated Flutter Developer with over 1 year of hands-on experience creating and implementing innovative mobile applications. Proficient in all stages of the software development life cycle, with a strong foundation in mobile app architecture, user interface design, and cross-platform development. Adept at collaborating with cross-functional teams to define, design, and ship new features. Proven track record of delivering high-quality and performant applications for both Android and IOS platforms.",
-                              style: GoogleFonts.heebo(
-                                textStyle: const TextStyle(
-                                  fontSize: 20.0,
-                                  color: ColorConstant.golden,
-                                  letterSpacing: 1,
-                                ),
+                                  Text(
+                                    'Mobile App Developer',
+                                    style: GoogleFonts.sevillana(
+                                      textStyle: const TextStyle(
+                                        fontSize: 35.0,
+                                        color: ColorConstant.white,
+                                      ),
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
-                            const SizedBox(
-                              height: 30,
-                            ),
                           ],
-                        )
-                    ,
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Text(
+                          "Highly skilled and motivated Flutter Developer with over 1 year of hands-on experience creating and implementing innovative mobile applications. Proficient in all stages of the software development life cycle, with a strong foundation in mobile app architecture, user interface design, and cross-platform development. Adept at collaborating with cross-functional teams to define, design, and ship new features. Proven track record of delivering high-quality and performant applications for both Android and IOS platforms.",
+                          style: GoogleFonts.heebo(
+                            textStyle: const TextStyle(
+                              fontSize: 20.0,
+                              color: ColorConstant.golden,
+                              letterSpacing: 1,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 30,
+                        ),
+                      ],
+                    ),
               MediaQuery.of(context).size.width > 770
                   ? Container(
                       width: double.infinity,
@@ -434,7 +439,8 @@ class _AboutState extends State<About> {
                 discription:
                     '❧ Backend development :- RESTful APIs for our compony projects in java.\n❧ Database:- Manage database on sql for our company projects.\n❧ Flutter Development.',
                 mainHead: 'Employement',
-                subtittle: 'EHS25 HR India Private Limited - ${dateDifference(DateTime(2023, 10))}',
+                subtittle:
+                    'EHS25 HR India Private Limited - ${dateDifference(DateTime(2023, 10))}',
                 tittle: 'Senior Flutter Developer',
               ),
               const SizedBox(

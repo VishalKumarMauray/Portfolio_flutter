@@ -1,4 +1,3 @@
-import 'dart:html';
 import 'dart:ui';
 
 class ImageConstant {
@@ -32,6 +31,7 @@ class ImageConstant {
   static const String venom4 = "assets/4.jpg";
   static const String venom5 = "assets/5.jpg";
   static const String playstore = "assets/playstore.png";
+  static const String video = "assets/bgVideo.gif";
 }
 
 class ColorConstant {
