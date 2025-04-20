@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 class AppLightTheme {
-  static const Color primaryColor = Colors.blue;
-  static const Color secondaryColor = Colors.amber;
+  static const Color primaryColor = Color(0xff00BD95);
+  static const Color secondaryColor = Color(0xff155750);
+  static const Color cardColor = Color(0xffEDEDF1);
   static const Color backgroundColor = Colors.white;
   static const Color textColor = Colors.black;
 
@@ -10,6 +11,8 @@ class AppLightTheme {
     return ThemeData(
       brightness: Brightness.light,
       primaryColor: primaryColor,
+      secondaryHeaderColor: secondaryColor,
+      cardColor: cardColor,
       scaffoldBackgroundColor: backgroundColor,
       appBarTheme: const AppBarTheme(
         backgroundColor: primaryColor,
@@ -28,10 +31,10 @@ class AppLightTheme {
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          backgroundColor: primaryColor,
+          backgroundColor: secondaryColor,
           foregroundColor: Colors.white,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12),
+            borderRadius: BorderRadius.circular(8),
           ),
         ),
       ),

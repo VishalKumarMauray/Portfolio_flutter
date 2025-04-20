@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:portfolio/theme/view/dark_theme.dart';
+import 'package:portfolio/utils/constants.dart';
 import 'package:provider/provider.dart';
 
 import '../Presentation/home/home.dart';
@@ -27,10 +29,11 @@ class _MyAppState extends State<MyApp> {
         ),
       ),
       child: ScreenUtilInit(
-        designSize: Size(
-          data.size.width,
-          data.size.height,
-        ),
+        designSize: isDesktop(context)
+            ? desktopSize
+            : isTab(context)
+                ? tabletSize
+                : mobileSize,
         minTextAdapt: true,
         splitScreenMode: false,
         builder: (context, _) {
@@ -38,7 +41,7 @@ class _MyAppState extends State<MyApp> {
             title: Strings.appName,
             debugShowCheckedModeBanner: false,
             theme: AppLightTheme.themeData,
-            darkTheme: ThemeData.dark(),
+            darkTheme: AppDarkTheme.themeData,
             themeMode: themeProvider.themeMode,
             home: const HomeScreen(),
           );
