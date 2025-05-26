@@ -90,28 +90,28 @@ class _HomeScreenState extends State<HomeScreen> {
               // SliverToBoxAdapter(child: SizedBox(height: 30.h)),
               // const Header(),
               // SliverToBoxAdapter(child: SizedBox(height: 30.h)),
-              SliverStickyHeader(
-                overlapsContent: true,
-                header: const Align(
-                  alignment: Alignment.centerLeft,
-                  child: SidePanel(),
-                ),
-                sliver: SliverPadding(
-                  padding: EdgeInsets.only(left: 385.w),
-                  sliver: SliverToBoxAdapter(
-                    child: Column(children: [
-                      // const Skills(),
-                      // SizedBox(height: 20.h),
-                      const Education(),
-                      SizedBox(height: 20.h),
-                      const Experience(),
-                    ]),
-                  ),
-                ),
-              ),
-              SliverToBoxAdapter(
-                child: SizedBox(height: 30.h),
-              ),
+              // SliverStickyHeader(
+              // overlapsContent: true,
+              // header: const Align(
+              // alignment: Alignment.centerLeft,
+              // child: SidePanel(),
+              // ),
+              // sliver: SliverPadding(
+              // padding: EdgeInsets.only(left: 385.w),
+              // sliver: SliverToBoxAdapter(
+              // child: Column(children: [
+              // const Skills(),
+              // SizedBox(height: 20.h),
+              // const Education(),
+              // SizedBox(height: 20.h),
+              // const Experience(),
+              // ]),
+              // ),
+              // ),
+              // ),
+              // SliverToBoxAdapter(
+              // child: SizedBox(height: 30.h)
+              // ),
               const Project(),
               SliverToBoxAdapter(child: SizedBox(height: 30.h)),
               const PersonalProjects(),

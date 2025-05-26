@@ -19,4 +19,8 @@ class Assets {
   static const vbspu = "$_base/vbspu.png";
   static const kcmt = "$_base/kcmt.png";
   static const harrow = "$_base/harrow.png";
+  static const appStoreIcon = "$_base/AppStore.png";
+  static const playStoreIcon = "$_base/playStore.png";
+  static const ppsample = "$_base/personalProjectSample.png";
+  static const guruPayroll = "$_base/gurupayroll.png";
 }
