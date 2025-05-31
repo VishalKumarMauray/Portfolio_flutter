@@ -35,8 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
             scrollBehavior: NoScrollbarBehavior(),
             slivers: [
               // SliverToBoxAdapter(
-              //   child:
-              //   Row(
+              //   child: Row(
               //     crossAxisAlignment: CrossAxisAlignment.start,
               //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
               //     children: [
@@ -58,30 +57,31 @@ class _HomeScreenState extends State<HomeScreen> {
               //           ),
               //           Positioned(
               //             top: 12,
-              //             child:
-              //       GestureDetector(
-              //     onTap: () async {
-              //       if (imageBOpacity == 1) {
-              //         setState(() {
-              //           imageBOpacity = 0;
-              //         });
-              //         await Future.delayed(const Duration(milliseconds: 100));
-              //         themeProvider.toggleTheme(true);
-              //       } else {
-              //         setState(() {
-              //           imageBOpacity = 1;
-              //         });
-              //         await Future.delayed(const Duration(milliseconds: 100));
-              //         themeProvider.toggleTheme(false);
-              //       }
-              //     },
-              //     child: Image.asset(
-              //       Assets.cloud,
-              //       height: 78.h,
-              //       width: 98.w,
-              //     ),
-              //   ),
-              // ),
+              //             child: GestureDetector(
+              //               onTap: () async {
+              //                 if (imageBOpacity == 1) {
+              //                   setState(() {
+              //                     imageBOpacity = 0;
+              //                   });
+              //                   await Future.delayed(
+              //                       const Duration(milliseconds: 100));
+              //                   themeProvider.toggleTheme(true);
+              //                 } else {
+              //                   setState(() {
+              //                     imageBOpacity = 1;
+              //                   });
+              //                   await Future.delayed(
+              //                       const Duration(milliseconds: 100));
+              //                   themeProvider.toggleTheme(false);
+              //                 }
+              //               },
+              //               child: Image.asset(
+              //                 Assets.cloud,
+              //                 height: 78.h,
+              //                 width: 98.w,
+              //               ),
+              //             ),
+              //           ),
               //         ],
               //       ),
               //     ],
@@ -89,29 +89,27 @@ class _HomeScreenState extends State<HomeScreen> {
               // ),
               // SliverToBoxAdapter(child: SizedBox(height: 30.h)),
               // const Header(),
-              // SliverToBoxAdapter(child: SizedBox(height: 30.h)),
+              // SliverToBoxAdapter(child: SizedBox(height: 200.h)),
               // SliverStickyHeader(
-              // overlapsContent: true,
-              // header: const Align(
-              // alignment: Alignment.centerLeft,
-              // child: SidePanel(),
+              //   overlapsContent: true,
+              //   header: const Align(
+              //     alignment: Alignment.centerLeft,
+              //     child: SidePanel(),
+              //   ),
+              //   sliver: SliverPadding(
+              //     padding: EdgeInsets.only(left: 385.w),
+              //     sliver: SliverToBoxAdapter(
+              //       child: Column(children: [
+              //         const Skills(),
+              //         SizedBox(height: 20.h),
+              //         const Education(),
+              //         SizedBox(height: 20.h),
+              //         const Experience(),
+              //       ]),
+              //     ),
+              //   ),
               // ),
-              // sliver: SliverPadding(
-              // padding: EdgeInsets.only(left: 385.w),
-              // sliver: SliverToBoxAdapter(
-              // child: Column(children: [
-              // const Skills(),
-              // SizedBox(height: 20.h),
-              // const Education(),
-              // SizedBox(height: 20.h),
-              // const Experience(),
-              // ]),
-              // ),
-              // ),
-              // ),
-              // SliverToBoxAdapter(
-              // child: SizedBox(height: 30.h)
-              // ),
+              // SliverToBoxAdapter(child: SizedBox(height: 30.h)),
               const Project(),
               SliverToBoxAdapter(child: SizedBox(height: 30.h)),
               const PersonalProjects(),

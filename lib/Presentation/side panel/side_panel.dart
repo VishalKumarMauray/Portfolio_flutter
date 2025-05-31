@@ -41,7 +41,7 @@ class SidePanel extends StatelessWidget {
                     height: 284.h,
                     width: 284.h,
                     decoration: ShapeDecoration(
-                      shape: CircleBorder(),
+                      shape: const CircleBorder(),
                       color: Theme.of(context).secondaryHeaderColor,
                     ),
                     child: Center(
@@ -49,7 +49,7 @@ class SidePanel extends StatelessWidget {
                         height: 254.h,
                         width: 254.h,
                         decoration: ShapeDecoration(
-                          shape: CircleBorder(),
+                          shape: const CircleBorder(),
                           color: Theme.of(context).primaryColor,
                         ),
                       ),
@@ -75,7 +75,7 @@ class SidePanel extends StatelessWidget {
             height: 40.h,
             child: ElevatedButton(
               onPressed: () {},
-              child: Text("Resume"),
+              child: const Text("Resume"),
             ),
           ),
           SizedBox(height: 40.h),

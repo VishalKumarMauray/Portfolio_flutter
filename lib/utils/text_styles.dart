@@ -25,6 +25,9 @@ class TextStylesDesktop {
   static TextStyle aclonia52 = GoogleFonts.aclonica(
     fontSize: 52.sp,
   );
+  static TextStyle aclonia44 = GoogleFonts.aclonica(
+    fontSize: 44.sp,
+  );
   static TextStyle aclonia34 = GoogleFonts.aclonica(
     fontSize: 34.sp,
   );

@@ -11,36 +11,36 @@ class Skills extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        CustomHeading(
+        const CustomHeading(
           tittle: "My Skills",
         ),
         SizedBox(height: 10.h),
-        SkillsCard(
+        const SkillsCard(
           tittle: "Flutter",
           value: 0.8,
         ),
         SizedBox(height: 5.h),
-        SkillsCard(
+        const SkillsCard(
           tittle: "Git",
           value: 0.6,
         ),
         SizedBox(height: 5.h),
-        SkillsCard(
+        const SkillsCard(
           tittle: "Ios",
           value: 0.2,
         ),
         SizedBox(height: 5.h),
-        SkillsCard(
+        const SkillsCard(
           tittle: "Android",
           value: 0.4,
         ),
         SizedBox(height: 5.h),
-        SkillsCard(
+        const SkillsCard(
           tittle: "Firebase",
           value: 0.5,
         ),
         SizedBox(height: 5.h),
-        SkillsCard(
+        const SkillsCard(
           tittle: "Rest Api",
           value: 0.7,
         ),
@@ -65,19 +65,22 @@ class SkillsCard extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          "$tittle",
+          tittle,
           style: TextStylesDesktop.readexPro16.copyWith(
             fontWeight: FontWeight.w500,
           ),
         ),
-        LinearProgressIndicator(
-          value: value,
-          backgroundColor: Theme.of(context).cardColor,
-          valueColor: AlwaysStoppedAnimation<Color>(
-            Theme.of(context).primaryColor,
+        Padding(
+          padding: EdgeInsets.only(right: 20.w),
+          child: LinearProgressIndicator(
+            value: value,
+            backgroundColor: Theme.of(context).cardColor,
+            valueColor: AlwaysStoppedAnimation<Color>(
+              Theme.of(context).primaryColor,
+            ),
+            borderRadius: BorderRadius.circular(20),
+            minHeight: 20.h,
           ),
-          borderRadius: BorderRadius.circular(20),
-          minHeight: 20.h,
         ),
       ],
     );
