@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:portfolio/Presentation/contact%20us/contact_us.dart';
 import 'package:portfolio/Presentation/education/education.dart';
 import 'package:portfolio/Presentation/experience/experience.dart';
 import 'package:portfolio/Presentation/header/header.dart';
@@ -112,9 +113,9 @@ class _HomeScreenState extends State<HomeScreen> {
               // SliverToBoxAdapter(child: SizedBox(height: 30.h)),
               // const Project(),
               // SliverToBoxAdapter(child: SizedBox(height: 30.h)),
-              const PersonalProjects(),
+              // const PersonalProjects(),
               // SliverToBoxAdapter(child: SizedBox(height: 30.h)),
-              // const ContactUs(),
+              const ContactUs(),
             ],
           ),
         ),

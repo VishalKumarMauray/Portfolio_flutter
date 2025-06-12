@@ -42,4 +42,13 @@ class Assets {
   static const nearez1 = "$_base/Nearez-left.png";
   static const yantru = "$_base/yantru-portrait.png";
   static const yantru1 = "$_base/yantru-left.png";
+  static const ballon = "$_base/ballon.png";
+  static const fbG = "$_base/fb.jpeg";
+  static const googleG = "$_base/google.jpeg";
+  static const instagramG = "$_base/instagram.jpeg";
+  static const linkedinG = "$_base/linkedin.jpeg";
+  static const snapchatG = "$_base/snapchat.jpeg";
+  static const telegramG = "$_base/telegram.jpeg";
+  static const twitterG = "$_base/twitter.jpeg";
+  static const whatsappG = "$_base/whatsapp.jpeg";
 }
