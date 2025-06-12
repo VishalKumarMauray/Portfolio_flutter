@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:portfolio/Presentation/contact%20us/contact_us.dart';
 import 'package:portfolio/Presentation/education/education.dart';
 import 'package:portfolio/Presentation/experience/experience.dart';
 import 'package:portfolio/Presentation/header/header.dart';
@@ -8,11 +7,11 @@ import 'package:portfolio/Presentation/personal%20project/personal_projects.dart
 import 'package:portfolio/Presentation/project/project.dart';
 import 'package:portfolio/Presentation/side%20panel/side_panel.dart';
 import 'package:portfolio/Presentation/skills/skills.dart';
+import 'package:portfolio/utils/assets_constant.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_sticky_header/flutter_sticky_header.dart';
 
 import '../../theme/controller/theme_provider.dart';
-import '../../utils/assets_constant.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -87,6 +86,7 @@ class _HomeScreenState extends State<HomeScreen> {
               //     ],
               //   ),
               // ),
+
               // SliverToBoxAdapter(child: SizedBox(height: 30.h)),
               // const Header(),
               // SliverToBoxAdapter(child: SizedBox(height: 200.h)),
@@ -110,11 +110,11 @@ class _HomeScreenState extends State<HomeScreen> {
               //   ),
               // ),
               // SliverToBoxAdapter(child: SizedBox(height: 30.h)),
-              const Project(),
-              SliverToBoxAdapter(child: SizedBox(height: 30.h)),
+              // const Project(),
+              // SliverToBoxAdapter(child: SizedBox(height: 30.h)),
               const PersonalProjects(),
-              SliverToBoxAdapter(child: SizedBox(height: 30.h)),
-              const ContactUs(),
+              // SliverToBoxAdapter(child: SizedBox(height: 30.h)),
+              // const ContactUs(),
             ],
           ),
         ),

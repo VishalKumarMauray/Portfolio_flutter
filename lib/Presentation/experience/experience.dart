@@ -60,7 +60,7 @@ class Experience extends StatelessWidget {
                   boxShadow: [
                     BoxShadow(
                       color: Colors.black.withOpacity(0.2),
-                      offset: Offset(2, 2),
+                      offset: const Offset(2, 2),
                       blurRadius: 1,
                       spreadRadius: 3,
                     ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:portfolio/utils/assets_constant.dart';
 import 'package:portfolio/utils/text_styles.dart';
 import 'package:url_launcher/url_launcher_string.dart';
@@ -40,58 +41,122 @@ class Project extends StatelessWidget {
       "The ayurvedic way is the best way to heal. This application contains several ayurvedic therapy, tips, treatment and medicine in hindi. So, all of you who trust in the power of nature, install the app right now",
       "GuruPayroll HRMS provides employee management system for one or more companies that are registered with us.",
     ];
-    final List<String> playStoreLink = [];
-    final List<String> appStoreLink = [];
+    final List<String> playStoreLink = [
+      "https://play.google.com/store/apps/details?id=com.nearez.nearezapp",
+      "https://play.google.com/store/apps/details?id=com.app.edansh",
+      "https://play.google.com/store/apps/details?id=com.jewelflix.manoharjewellers&hl=en_IN",
+      "https://play.google.com/store/apps/details?id=com.yantru.app&hl=en_IN",
+      "https://play.google.com/store/apps/details?id=com.isnt.app&hl=en_IN",
+      "https://play.google.com/store/search?q=mother%20dairy&c=apps&hl=en_IN",
+      "https://play.google.com/store/apps/details?id=com.lalit.Gurupayroll&hl=en_IN",
+      "https://play.google.com/store/apps/details?id=com.lalit.ayurvedsanstha&hl=en_IN",
+    ];
+    final List<String> appStoreLink = [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "https://apps.apple.com/in/app/mother-dairy/id6450038507",
+      "https://apps.apple.com/in/app/guru-payroll/id6503728698",
+      "",
+    ];
     return SliverToBoxAdapter(
       child: Column(
         children: [
-          CustomHeading2(
+          const CustomHeading2(
             tittle: "Projects Worked On",
           ),
+          SizedBox(height: 20.h),
           Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: List.generate(
-              5,
+              imageList.length,
               (index) {
-                return Row(
-                  children: [
-                    Image.asset(imageList[index]),
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Theme.of(context).primaryColor,
-                      ),
-                      child: Column(
-                        children: [
-                          Text(
-                            tittle[index],
-                            style: TextStylesDesktop.heebo22.copyWith(
-                              fontWeight: FontWeight.w700,
+                return Transform(
+                  alignment: Alignment.center,
+                  transform: Matrix4.identity()
+                    ..scale(index % 2 == 0 ? -1.0 : 1.0, 1.0),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Expanded(
+                        child: Container(
+                          margin: EdgeInsets.only(left: 0.2.sw),
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 30.w, vertical: 10.h),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Theme.of(context).primaryColor,
+                          ),
+                          child: Transform(
+                            alignment: Alignment.center,
+                            transform: Matrix4.identity()
+                              ..scale(index % 2 == 0 ? -1.0 : 1.0, 1.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  tittle[index],
+                                  style: TextStylesDesktop.aclonia52.copyWith(
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                ),
+                                Text(
+                                  discription[index],
+                                  style: TextStylesDesktop.heebo18.copyWith(
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                ),
+                                SizedBox(height: 20.h),
+                                Row(
+                                  children: [
+                                    if (playStoreLink[index].isNotEmpty)
+                                      GestureDetector(
+                                        onTap: () {
+                                          launchUrlString(playStoreLink[index]);
+                                        },
+                                        child: Image.asset(
+                                          Assets.playStoreIcon,
+                                          height: 100.h,
+                                          width: 300.w,
+                                        ),
+                                      ),
+                                    if (appStoreLink[index].isNotEmpty)
+                                      GestureDetector(
+                                        onTap: () {
+                                          launchUrlString(appStoreLink[index]);
+                                        },
+                                        child: Image.asset(
+                                          Assets.appStoreIcon,
+                                          height: 100.h,
+                                          width: 300.w,
+                                        ),
+                                      ),
+                                  ],
+                                ),
+                              ],
                             ),
                           ),
-                          Text(
-                            discription[index],
-                            style: TextStylesDesktop.heebo22.copyWith(
-                              fontWeight: FontWeight.w700,
-                            ),
-                          ),
-                          if (playStoreLink[index].isNotEmpty)
-                            GestureDetector(
-                              onTap: () {
-                                launchUrlString(playStoreLink[index]);
-                              },
-                              child: Image.asset(Assets.playStoreIcon),
-                            ),
-                          if (appStoreLink[index].isNotEmpty)
-                            GestureDetector(
-                              onTap: () {
-                                launchUrlString(appStoreLink[index]);
-                              },
-                              child: Image.asset(Assets.appStoreIcon),
-                            ),
-                        ],
+                        ),
                       ),
-                    ),
-                  ],
+                      Transform.translate(
+                        offset: const Offset(-40, -30),
+                        child: Transform(
+                          alignment: Alignment.center,
+                          transform: Matrix4.identity()
+                            ..scale(index % 2 == 0 ? -1.0 : 1.0, 1.0),
+                          child: Image.asset(
+                            imageList[index],
+                            fit: BoxFit.cover,
+                            height: 618.h,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 );
               },
             ),

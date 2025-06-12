@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:portfolio/utils/assets_constant.dart';
 import 'package:portfolio/utils/text_styles.dart';
 
 class CustomHeading extends StatelessWidget {

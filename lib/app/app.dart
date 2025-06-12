@@ -7,7 +7,6 @@ import 'package:provider/provider.dart';
 import '../Presentation/home/home.dart';
 import '../theme/controller/theme_provider.dart';
 import '../theme/view/light_theme.dart';
-import '../utils/string_constant.dart';
 
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
@@ -38,7 +37,7 @@ class _MyAppState extends State<MyApp> {
         splitScreenMode: false,
         builder: (context, _) {
           return MaterialApp(
-            title: Strings.appName,
+            title: "Portfolio",
             debugShowCheckedModeBanner: false,
             theme: AppLightTheme.themeData,
             darkTheme: AppDarkTheme.themeData,
