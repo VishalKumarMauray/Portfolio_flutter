@@ -30,6 +30,8 @@ class Project extends StatelessWidget {
       "MOTHER DAIRY",
       "GURU PAYROLL",
       "AAROGYA INDIA",
+      "NESA Tracking",
+      "Fleetminder Fleet Management",
     ];
     final List<String> discription = [
       "We would like to introduce about Cloudriders Solution pvt ltd. We have established in 2022 and provides internet services with the help of our single product 'Nearez' which would help to find local business as per users need.",
@@ -38,8 +40,10 @@ class Project extends StatelessWidget {
       "Yantru allows for remote device management of your Android devices. It is an advanced technology that helps to secure monthly instalment (EMI) payments for finance devices. ",
       "The Annual Conference of Indian Society for Non-Destructive Testing (ISNT), the Official Technical Society for NDT/NDE in India, NDE 2023, is organised every year.",
       "It was an initiative under Operation Flood, the world's biggest dairy development program launched to make India a milk sufficient nation",
-      "The ayurvedic way is the best way to heal. This application contains several ayurvedic therapy, tips, treatment and medicine in hindi. So, all of you who trust in the power of nature, install the app right now",
       "GuruPayroll HRMS provides employee management system for one or more companies that are registered with us.",
+      "The ayurvedic way is the best way to heal. This application contains several ayurvedic therapy, tips, treatment and medicine in hindi. So, all of you who trust in the power of nature, install the app right now",
+      "NESA Tracking is a powerful GPS tracking app designed to give businesses and individuals full control over their vehicles. Whether you're tracking a single car or managing a large fleet, NESA Tracking app and portals provide intelligent tools to enhance safety, reduce costs, and increase operational efficiency. Built with advanced features like engine immobilization, video streaming and playback, trip replays, and geofencing NESA Tracking is the ultimate solution for transport companies, logistics operators, delivery services, and more.",
+      "Fleetminder is a powerful GPS tracking and fleet management app designed to give businesses and individuals full control over their vehicles. Whether you're tracking a single car or managing a large fleet, Fleetminder provides intelligent tools to enhance safety, reduce costs, and increase operational efficiency.Built with advanced features like engine immobilization, video playback and streaming, trip replays, and geofencing, Fleetminder is the ultimate solution for transport companies, logistics operators, delivery services, and more.",
     ];
     final List<String> playStoreLink = [
       "https://play.google.com/store/apps/details?id=com.nearez.nearezapp",
@@ -50,6 +54,8 @@ class Project extends StatelessWidget {
       "https://play.google.com/store/search?q=mother%20dairy&c=apps&hl=en_IN",
       "https://play.google.com/store/apps/details?id=com.lalit.Gurupayroll&hl=en_IN",
       "https://play.google.com/store/apps/details?id=com.lalit.ayurvedsanstha&hl=en_IN",
+      "https://play.google.com/store/apps/details?id=com.nesa.fleet&hl=en_IN",
+      "https://play.google.com/store/apps/details?id=com.fleetminder.user.fleet_minder&hl=en_IN",
     ];
     final List<String> appStoreLink = [
       "",
@@ -60,6 +66,8 @@ class Project extends StatelessWidget {
       "https://apps.apple.com/in/app/mother-dairy/id6450038507",
       "https://apps.apple.com/in/app/guru-payroll/id6503728698",
       "",
+      "https://apps.apple.com/in/app/nesa-tracking/id6743690298",
+      "https://apps.apple.com/in/app/fleetminder-fleet-management/id1220705199",
     ];
     return SliverToBoxAdapter(
       child: Column(
